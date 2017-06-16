@@ -15,7 +15,8 @@ namespace PokemonLibrary
 
         public override void Attack(Pokemon other)
         {
-            other.CurrentHp -= 20;
+            base.Attack(other);
+            other.CurrentHp -= 15;
         }
     }
 }
