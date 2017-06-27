@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3867EC65-6E20-4177-BE80-368676F253E7}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeatherStationLibrary</RootNamespace>
-    <AssemblyName>WeatherStationLibrary</AssemblyName>
+    <ProjectGuid>{18767139-2134-44B4-81D4-84E4CA0D839B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleGram</RootNamespace>
+    <AssemblyName>ConsoleGram</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,14 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeautifyFacePlugin.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CameraFilter.cs" />
+    <Compile Include="CameraPlugin.cs" />
+    <Compile Include="FadeFilter.cs" />
+    <Compile Include="IFilter.cs" />
+    <Compile Include="LomoFilter.cs" />
+    <Compile Include="PanoramaCameraPlugin.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WeatherData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\EasyMathLibrary\EasyMathLibrary\EasyMathLibrary.csproj">
-      <Project>{0b440026-7568-4812-b67d-7489beee5eeb}</Project>
-      <Name>EasyMathLibrary</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
